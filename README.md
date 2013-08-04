@@ -4,11 +4,11 @@ This is an abstraction layer built on top of the BrowserStack API to make it eas
 
 ## Installation
 
-    $ npm install browserstack-runner
+    $ npm install browserstack-workers
 
 ## Usage
 
-    var runner = require('browserstack-runner');
+    var runner = require('browserstack-workers');
 
     var client = runner.createClient('<username>', '<password>', '<api-key>');
 
@@ -58,4 +58,4 @@ A job should be a HTML page on either a local or remote server. The page can con
 
 ## License
  
-BrowserStack Runner is licensed under the three-clause BSD license. Copyright 2013 Bram Stein, all rights reserved.
+BrowserStack Workers is licensed under the three-clause BSD license. Copyright 2013 Bram Stein, all rights reserved.
