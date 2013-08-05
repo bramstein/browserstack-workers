@@ -1,4 +1,4 @@
-## BrowserStack Runner
+## BrowserStack Workers
 
 This is an abstraction layer built on top of the BrowserStack API to make it easier to run arbitrary jobs on BrowserStack workers. It is the basis for the BrowserStack testing framework that automatically runs your Jasmine or Mocha.js test suites on BrowserStack virtual machines. It can also be used to run other JavaScript tasks.
 
@@ -8,11 +8,11 @@ This is an abstraction layer built on top of the BrowserStack API to make it eas
 
 ## Usage
 
-    var runner = require('browserstack-workers');
+    var Client = require('browserstack-workers');
 
-    var client = runner.createClient('<username>', '<password>', '<api-key>');
+    var runner = new Client('<username>', '<password>', '<api-key>');
 
-    client.createJob('<url>', function (err, job) {
+    runner.createJob('<url>', function (err, job) {
       job.addBrowser({
         browser: 'chrome',
         browser_version: '27',
@@ -41,7 +41,7 @@ This is an abstraction layer built on top of the BrowserStack API to make it eas
       job.run();
     });
 
-The `createClient` method creates a new instance of a BrowserStack client. As parameters it takes your BrowserStack `username`, `password` and `api-key`. The `client` only has a single method `createJob`.
+The class returned by `require('browserstack-workers')` creates a new instance of a BrowserStack client. As parameters it takes your BrowserStack `username`, `password` and `api-key`. An instance of the class only has a single method `createJob`.
 
 The `createJob` takes as input a `url`, an optional options object and a callback. The URL is the "job" you want to run, and should be a HTML page on either a local or remote server. A secure tunnel to BrowserStack is automatically created. The options object currently only has a single value, `timeout` which should be the number of seconds a BrowserStack worker runs before being forcibly shut down. The callback is called with either an error object or a job instance.
 
