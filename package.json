@@ -1,6 +1,6 @@
 {
   "name": "browserstack-workers",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A library for creating workers on BrowserStack and retrieving results",
   "main": "lib/client.js",
   "repository": "",
