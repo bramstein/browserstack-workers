@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This module has been deprecated and is no longer maintained.
+
 ## BrowserStack Workers
 
 This is an abstraction layer built on top of the BrowserStack API to make it easier to run arbitrary jobs on BrowserStack workers. It is the basis for the BrowserStack testing framework that automatically runs your Jasmine or Mocha.js test suites on BrowserStack virtual machines. It can also be used to run other JavaScript tasks.
